@@ -1,0 +1,505 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+   <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="@string/delete" />
+
+    <maria.com.ChipsActivity
+                android:id="@+id/input_text"
+                android:layout_width="700dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="@string/phrase"
+        		android:inputType="textMultiLine|textCapSentences" />
+
+        <Button
+            android:id="@+id/save_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="@string/save"
+            android:onClick="savePhrase"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/what_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save"
+            android:background="@color/grey_button"  />
+
+        <Button
+            android:id="@+id/think_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/think"
+            android:background="@color/green_button" />
+
+        <Button
+            android:id="@+id/need_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/need"
+            android:background="@color/green_button" />
+
+        <Button
+            android:id="@+id/want_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/want"
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/hope_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hope"
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/be_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/be"
+            android:background="@color/green_button" />
+
+        <Button
+            android:id="@+id/have_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/have" 
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/yes_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/yes" 
+            android:background="@color/pink_button"/>
+
+        <Button
+            android:id="@+id/no_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/no" 
+            android:background="@color/pink_button"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/who_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/who"
+            android:background="@color/grey_button"/>
+
+        <Button
+            android:id="@+id/mi_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mi" 
+            android:background="@color/white_button"/>
+
+        <Button
+            android:id="@+id/you_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/you"
+            android:background="@color/white_button"/>
+
+        <Button
+            android:id="@+id/all_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/all" 
+            android:background="@color/yellow_button"/>
+
+        <Button
+            android:id="@+id/nobody_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/nobody"
+            android:background="@color/yellow_button"/>
+
+        <Button
+            android:id="@+id/it_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/it"
+            android:background="@color/yellow_button"/>
+
+        <Button
+            android:id="@+id/know_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/know"
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/hi_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hi"
+            android:background="@color/palepink_button"/>
+
+        <Button
+            android:id="@+id/tal_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tal"
+            android:background="@color/palepink_button"/>
+
+        <Button
+            android:id="@+id/thanks_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/thanks"
+            android:background="@color/palepink_button"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/when_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/when"
+            android:background="@color/grey_button"/>
+
+        <Button
+            android:id="@+id/is_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+           android:text="@string/is"
+            android:background="@color/green_button"/>
+
+
+        <Button
+            android:id="@+id/he_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/he"
+            android:background="@color/yellow_button"/>
+
+        <Button
+            android:id="@+id/she_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/she"
+            android:background="@color/yellow_button"/>
+
+        <Button
+            android:id="@+id/me_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/me"
+            android:background="@color/white_button"/>
+
+        <Button
+            android:id="@+id/hurt_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hurt"
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/like_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/like"
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/fine_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fine" 
+            android:background="@color/palepink_button"/>
+
+        <Button
+            android:id="@+id/please_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/please" 
+            android:background="@color/palepink_button"/>
+        
+        <Button
+            android:id="@+id/sorry_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sorry" 
+            android:background="@color/palepink_button"/>
+        
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/how_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/how" 
+            android:background="@color/grey_button"/>
+
+        <Button
+            android:id="@+id/few_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/few"
+            android:background="@color/blue_button"/>
+
+        <Button
+            android:id="@+id/very_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/very"
+            android:background="@color/blue_button"/>
+
+        <Button
+            android:id="@+id/much_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/much"
+            android:background="@color/blue_button"/>
+
+        <Button
+            android:id="@+id/nothing_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/nothing"
+            android:background="@color/blue_button"/>
+
+        <Button
+            android:id="@+id/more_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/more"
+            android:background="@color/blue_button" />
+
+        <Button
+            android:id="@+id/less_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/less"
+            android:background="@color/blue_button"/>
+
+        <Button
+            android:id="@+id/maybe_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/maybe"
+            android:background="@color/palepink_button"/>
+
+        <Button
+            android:id="@+id/ok_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ok"
+            android:background="@color/palepink_button"/>
+
+        <Button
+            android:id="@+id/care_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/care"
+            android:background="@color/palepink_button"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+       <Button
+            android:id="@+id/where_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/where"
+            android:background="@color/grey_button"/>
+
+        <Button
+            android:id="@+id/here_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/here" 
+            android:background="@color/orange_button"/>
+
+        <Button
+            android:id="@+id/in_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/in" 
+            android:background="@color/orange_button"/>
+
+        <Button
+            android:id="@+id/bring_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bring"
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/come_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/come"
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/go_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/go" 
+            android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/do_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/make"
+			android:background="@color/green_button"/>
+
+        <Button
+            android:id="@+id/speak_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/speak" 
+            android:background="@color/white_button"/>
+    </TableRow>
+
+  <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">  
+
+		 <LinearLayout
+		     android:id="@+id/list"
+		     android:layout_width="match_parent"
+		     android:layout_height="340dp"
+		     android:orientation="vertical" >
+ 		</LinearLayout>
+   
+ </ScrollView>
+
+
+</TableLayout>

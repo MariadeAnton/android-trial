@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Conversando</string>
+    
+    <string name="delete">Borra Caja</string>
+	<string name="talk">Habla Ahora</string>
+	<string name="what">Que</string>
+	<string name="think">Pienso </string>
+	<string name="need">Necesito </string>
+	<string name="want">Quiero </string>
+	<string name="hope">Espero</string>
+	<string name="be">Estoy</string>
+	<string name="have">Tengo</string>
+	<string name="yes">Sí</string>
+	<string name="no">No</string>
+	<string name="save">Guarda</string>
+	
+	<string name="who">Quien</string>
+	<string name="mi">mi</string>
+	<string name="you">tu</string>
+	<string name="all">todos</string>
+	<string name="nobody">nadie</string>
+	<string name="it">lo</string>
+	<string name="know">sé</string>
+	<string name="hi">hola</string>
+	<string name="tal">Cómo estás</string>
+	<string name="thanks">Gracias</string>
+	    
+	    
+	<string name="when">Cuando</string>
+	<string name="is">es</string>
+	<string name="he">el</string>
+	<string name="she">ella</string>
+	<string name="me">me</string>
+	<string name="hurt">duele</string>
+	<string name="like">gusta</string>
+	<string name="please">Por favor</string>
+	<string name="sorry">Lo siento</string>
+	
+	<string name="how">Cómo</string>
+	<string name="few">pocos</string>
+	<string name="very">muy</string>
+	<string name="much">mucho</string>
+	<string name="nothing">nada</string>
+	<string name="more">más</string>
+	<string name="less">menos</string>	
+	<string name="maybe">Quizás</string>
+	<string name="ok">OK</string>
+	<string name="care">cuídate</string>
+	
+	<string name="where">Donde</string>
+	<string name="here">aquí</string>
+	<string name="in">en</string>
+	<string name="bring">traer</string>
+	<string name="come">venir</string>
+	<string name="go">ir</string>
+	<string name="fine">bien</string>
+	<string name="make">hacer</string>
+	<string name="speak">Habla ahora!</string>
+	<string name="phrase">Escribe aquí</string>
+    
+
+</resources>
