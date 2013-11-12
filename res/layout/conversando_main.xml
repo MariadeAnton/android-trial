@@ -12,7 +12,9 @@
             android:id="@+id/delete_button"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:text="@string/delete" />
+            android:text="@string/delete"
+            android:background="@color/white_button"
+             />
 
     <maria.com.ChipsActivity
                 android:id="@+id/input_text"
@@ -29,7 +31,8 @@
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:text="@string/save"
-            android:onClick="savePhrase"/>
+            android:onClick="savePhrase"
+            android:background="@color/white_button"/>
 
     </TableRow>
 
