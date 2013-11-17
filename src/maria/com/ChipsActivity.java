@@ -21,7 +21,7 @@ public class ChipsActivity extends EditText {
 	
 	
 	public boolean isTextAdditionInProgress = false, isTextDeletedFromTouch = false;
-	
+	public boolean textAdded = false;
 	/* Constructor */
 	public ChipsActivity(Context context) {
 		super(context);
@@ -47,17 +47,78 @@ public class ChipsActivity extends EditText {
 		
 		@Override
 		public void onTextChanged(CharSequence s, int start, int before, int count) {
-			if(count >=1){
-				if(s.charAt(start) == ' ')
-					setChips(); // generate chips
-			}
+			String currentText = getText().toString();
+			String texto = s.toString();
+			if((texto.length()==count) && textAdded ==false) return;
+			
+			textAdded = true;
+			if(count-before<0)return;
+			if((count-before ==1 )&&(( s.charAt(start) == ' ')||( s.charAt(start) == ',')||( s.charAt(start) == '.')))setChips2();
+			if(count-before >1 )setChips2();
+		
+		
+	/*		if(count >=1){
+				if(s.charAt(start) == ' ')setChips2(); // generate chips
+			}*/
 		}
 		@Override
-		public void beforeTextChanged(CharSequence s, int start, int count,int after) {}
+		public void beforeTextChanged(CharSequence s, int start, int count,int after) {
+		String currentText = getText().toString();
+		if(currentText.length() ==0)  textAdded=true;
+			
+		}
 		@Override
-		public void afterTextChanged(Editable s) {}
+		public void afterTextChanged(Editable s) {
+		/*	if(textAdded == true) setChips2();
+			textAdded = false;*/
+		}
 	};
 	/*This function has whole logic for chips generate*/
+	public void setChips2(){
+		SpannableStringBuilder ssb = new SpannableStringBuilder(getText());
+		String mytext = getText().toString();
+		
+		String  chips[] = mytext.trim().split(" ");
+		LayoutInflater lf = (LayoutInflater) getContext().getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+
+		int x=0;
+		for(String c: chips){
+			int sum=0;
+			if((c.length()>1)&&(c.endsWith(","))){c=c.substring(0, c.length()-1);
+								sum=1;
+						}
+			
+			TextView textView = (TextView) lf.inflate(R.layout.textview, null);
+			textView.setText(c); // set text
+			
+			// converts TextView to drawable Bitmap.
+			int spec = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
+			textView.measure(spec, spec);
+			textView.layout(0, 0, textView.getMeasuredWidth(), textView.getMeasuredHeight());
+			Bitmap b = Bitmap.createBitmap(textView.getWidth(), textView.getHeight(),Bitmap.Config.ARGB_8888);
+			Canvas canvas = new Canvas(b);
+			canvas.translate(-textView.getScrollX(), -textView.getScrollY());
+			textView.draw(canvas);
+			textView.setDrawingCacheEnabled(true);
+			Bitmap cacheBmp = textView.getDrawingCache();
+			Bitmap viewBmp = cacheBmp.copy(Bitmap.Config.ARGB_8888, true);
+			textView.destroyDrawingCache();  // destroy drawable
+			// create bitmap drawable for imagespan
+			BitmapDrawable bmpDrawable = new BitmapDrawable(viewBmp);
+			bmpDrawable.setBounds(0, 0,bmpDrawable.getIntrinsicWidth(),bmpDrawable.getIntrinsicHeight());
+			// create and set imagespan 
+			ssb.setSpan(new ImageSpan(bmpDrawable),x ,x + c.length() , Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+			x = x+ c.length() +1+sum;
+		}
+		// set chips span 
+		if(mytext.endsWith(" "))setText(ssb);
+		else {
+			setText(mytext+" ");
+			setChips2();
+		}
+		// move cursor to last 
+		setSelection(getText().length());
+	}
 	public void setChips(){
 		if(getText().toString().contains(" ")) // checks space in string
 		{

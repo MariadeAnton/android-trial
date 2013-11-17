@@ -7,9 +7,9 @@
     android:drawablePadding="4dp"
     android:drawableRight="@android:drawable/ic_menu_close_clear_cancel"
     android:padding="6dp"
-    android:shadowColor="#FFFFFF"
+    android:shadowColor="#0000FF"
     android:shadowDy="1"
     android:shadowRadius="0.01"
     android:textColor="#000000"
-    android:textSize="20sp"
+    android:textSize="40sp"
     android:textStyle="bold" />
