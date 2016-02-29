@@ -2,4 +2,4 @@ sudo: false
 language: android
 
 before_install: true
-script: echo hola
+script: echo hi
